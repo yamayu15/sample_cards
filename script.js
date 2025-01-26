@@ -31,3 +31,6 @@ document.getElementById('drawButton').addEventListener('click', drawCard);
 
 // 初回ロード時にデッキをシャッフル
 shuffleDeck();
+
+rank_kanni = "B";
+document.getElementById("id_rank_kanni").textContent = rank_kanni;
