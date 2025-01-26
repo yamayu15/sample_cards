@@ -33,31 +33,23 @@ document.getElementById('drawButton').addEventListener('click', drawCard);
 shuffleDeck();
 
 rank_kanni = "A";
-document.getElementById("id_rank_kanni").textContent = rank_kanni;
-
 rank_bunka = "A";
-document.getElementById("id_rank_bunka").textContent = rank_bunka;
-
 rank_nogyo = "B";
-document.getElementById("id_rank_nogyo").textContent = rank_nogyo;
-
 rank_syogyo = "C";
-document.getElementById("id_rank_syogyo").textContent = rank_syogyo;
-
 rank_asigaru = "A";
-document.getElementById("id_rank_asigaru").textContent = rank_asigaru;
-
 rank_domei = "S";
-document.getElementById("id_rank_domei").textContent = rank_domei;
-
 money_A = 3000;
-document.getElementById("id_money_A").textContent = money_A + "貫";
-
 money_B = 2000;
-document.getElementById("id_money_B").textContent = money_B + "貫";
-
 money_C = 1000;
-document.getElementById("id_money_C").textContent = money_C + "貫";
-
 money_D = 0;
+
+document.getElementById("id_rank_kanni").textContent = rank_kanni;
+document.getElementById("id_rank_bunka").textContent = rank_bunka;
+document.getElementById("id_rank_nogyo").textContent = rank_nogyo;
+document.getElementById("id_rank_syogyo").textContent = rank_syogyo;
+document.getElementById("id_rank_asigaru").textContent = rank_asigaru
+document.getElementById("id_rank_domei").textContent = rank_domei;
+document.getElementById("id_money_A").textContent = money_A + "貫";
+document.getElementById("id_money_B").textContent = money_B + "貫";
+document.getElementById("id_money_C").textContent = money_C + "貫";
 document.getElementById("id_money_D").textContent = money_D + "貫";
