@@ -134,7 +134,12 @@ async function drawCard() {
         rank_kanni = 4;
       }
     }
-
+    rank_kanni = Math.max(0, Math.min(rank_kanni, 4));
+    rank_bunka = Math.max(0, Math.min(rank_bunka, 4));
+    rank_nogyo = Math.max(0, Math.min(rank_nogyo, 4));
+    rank_syogyo = Math.max(0, Math.min(rank_syogyo, 4));
+    rank_asigaru = Math.max(0, Math.min(rank_asigaru, 4));
+    rank_domei = Math.max(0, Math.min(rank_domei, 4));
     update_table();
   } else {
     alert("カードを引くことができませんでした。");
