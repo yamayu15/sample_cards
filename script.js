@@ -32,5 +32,20 @@ document.getElementById('drawButton').addEventListener('click', drawCard);
 // 初回ロード時にデッキをシャッフル
 shuffleDeck();
 
-rank_kanni = "B";
+rank_kanni = "A";
 document.getElementById("id_rank_kanni").textContent = rank_kanni;
+
+rank_bunka = "A";
+document.getElementById("id_rank_bunka").textContent = rank_bunka;
+
+rank_nogyo = "B";
+document.getElementById("id_rank_nogyo").textContent = rank_nogyo;
+
+rank_syogyo = "C";
+document.getElementById("id_rank_syogyo").textContent = rank_syogyo;
+
+rank_asigaru = "A";
+document.getElementById("id_rank_asigaru").textContent = rank_asigaru;
+
+rank_domei = "S";
+document.getElementById("id_rank_domei").textContent = rank_domei;
