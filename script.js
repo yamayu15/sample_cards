@@ -34,6 +34,104 @@ async function drawCard() {
         if (rank_bunka == 3) {
           money = money + 1000;
         }
+        rank_bunka = rank_bunka - 1;
+      }
+      if (card.value == "2") {
+        if (rank_kanni <= 1) {
+          money = money - 4000;
+        }
+        if (rank_kanni == 2) {
+          money = money - 3000;
+        }
+        if (rank_kanni == 3) {
+          money = money - 2000;
+        }
+        if (rank_kanni == 4) {
+          money = money - 1000;
+        }
+        rank_kanni = rank_kanni - 1;
+      }
+      if (card.value == "3") {
+        if (rank_bunka == 2) {
+          money = money - 1000;
+        }
+        if (rank_bunka == 3) {
+          money = money - 2000;
+        }
+        if (rank_bunka == 4) {
+          money = money - 3000;
+        }
+        rank_bunka = rank_bunka - 1;
+      }
+      if (card.value == "4") {
+        if (rank_bunka == 2) {
+          money = money - 2000;
+        }
+        if (rank_bunka == 3) {
+          money = money - 2000;
+        }
+        if (rank_bunka == 4) {
+          money = money - 2000;
+        }
+      }
+      if (card.value == "5") {
+        if (rank_bunka <= 1) {
+          money = money - 3000;
+        }
+        if (rank_bunka == 2) {
+          money = money - 1000;
+        }
+        if (rank_bunka == 3) {
+          money = money - 1000;
+        }
+        if (rank_bunka == 4) {
+          money = money - 1000;
+        }
+        rank_bunka = rank_bunka - 1;
+      }
+      if (card.value == "6") {
+        if (rank_bunka <= 1) {
+          money = money + 5000;
+        }
+        if (rank_bunka == 2) {
+          money = money + 4000;
+        }
+        if (rank_bunka == 3) {
+          money = money + 2000;
+        }
+        if (rank_bunka == 4) {
+          money = money + 1000;
+        }
+      }
+      if (card.value == "7") {
+        if (rank_kanni <= 1) {
+          money = money - 3000;
+        }
+        if (rank_kanni == 2) {
+          money = money - 3000;
+        }
+        if (rank_kanni == 3) {
+          money = money - 1000;
+        }
+        if (rank_kanni == 4) {
+          money = money - 1000;
+        }
+        rank_kanni = rank_kanni - 1;
+      }
+      if (card.value == "8") {
+        money = money + 3000;
+        rank_kanni = rank_kanni - 1;
+      }
+      if (card.value == "9") {
+        if (rank_bunka <= 1) {
+          money = money - 5000;
+        }
+        if (rank_bunka == 2) {
+          money = money - 3000;
+        }
+      }
+      if (card.value == "10") {
+        rank_kanni = 4;
       }
     }
 
