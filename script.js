@@ -130,8 +130,96 @@ async function drawCard() {
           money = money - 3000;
         }
       }
+    }
+    if (card.suit == "CLUBS") {
+      console.log("CLUBS");
+      if (card.value == "ACE") {
+        if (rank_nogyo == 2) {
+          money = money - 1000;
+        }
+        if (rank_nogyo == 3) {
+          money = money - 2000;
+        }
+        if (rank_nogyo == 4) {
+          money = money - 3000;
+        }
+      }
+      if (card.value == "2") {
+        money = money - 2000
+        rank_nogyo = rank_nogyo + 1;
+      }
+      if (card.value == "3") {
+        if (rank_nogyo <= 1) {
+          money = money + 4000;
+        }
+        if (rank_nogyo == 2) {
+          money = money + 3000;
+        }
+        if (rank_nogyo == 3) {
+          money = money + 2000;
+        }
+        if (rank_nogyo == 4) {
+          money = money + 1000;
+        }
+        rank_nogyo = rank_nogyo - 1;
+      }
+      if (card.value == "4") {
+        if (rank_nogyo == 3) {
+          money = money - 3000;
+        }
+        if (rank_nogyo == 4) {
+          money = money - 3000;
+        }
+        rank_nogyo = rank_nogyo + 1;
+      }
+      if (card.value == "5") {
+        money = money - 3000;
+        if (rank_nogyo >= 3) {
+          rank_nogyo = rank_nogyo - 1;
+        }
+      }
+      if (card.value == "6") {
+        if (rank_nogyo <= 1) {
+          money = money + 3000;
+        }
+        if (rank_nogyo == 2) {
+          money = money + 3000;
+        }
+      }
+      if (card.value == "7") {
+        if (rank_kanni == 3) {
+          money -= 3000;
+        }
+        if (rank_kanni == 4) {
+          money = money - 3000;
+        }
+        rank_nogyo --;
+      }
+      if (card.value == "8") {
+        if (rank_nogyo <= 1) {
+          money = money - 1000;
+        }
+        if (rank_nogyo == 2) {
+          money = money - 2000;
+        }
+        if (rank_nogyo == 3) {
+          money = money - 3000;
+        }
+        if (rank_nogyo == 4) {
+          money = money - 4000;
+        }
+      }
+      if (card.value == "9") {
+        if (rank_nogyo == 3) {
+          money = money - 5000;
+        }
+        if (rank_nogyo == 4) {
+          money = money - 5000;
+        }
+        rank_asigaru = rank_asigaru - 2;
+      }
       if (card.value == "10") {
-        rank_kanni = 4;
+        money = money - 1000;
       }
     }
     rank_kanni = Math.max(0, Math.min(rank_kanni, 4));
