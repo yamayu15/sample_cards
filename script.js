@@ -42,6 +42,18 @@ money_A = 3000;
 money_B = 2000;
 money_C = 1000;
 money_D = 0;
+money = 10000;
+
+if (rank_bunka == "A") {
+  money = money + 3000;
+}
+if (rank_bunka == "B") {
+  money = money + 2000;
+}
+if (rank_bunka == "C") {
+  money = money + 1000;
+}
+
 
 document.getElementById("id_rank_kanni").textContent = rank_kanni;
 document.getElementById("id_rank_bunka").textContent = rank_bunka;
@@ -53,3 +65,4 @@ document.getElementById("id_money_A").textContent = money_A + "貫";
 document.getElementById("id_money_B").textContent = money_B + "貫";
 document.getElementById("id_money_C").textContent = money_C + "貫";
 document.getElementById("id_money_D").textContent = money_D + "貫";
+document.getElementById("id_money").textContent = money + "貫";
