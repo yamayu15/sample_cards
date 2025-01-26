@@ -31,23 +31,25 @@ async function drawCard() {
       money = money + 1000;
     }
     
-    document.getElementById("id_rank_kanni").textContent = "SABCD"[rank_kanni];
-    document.getElementById("id_rank_bunka").textContent = "SABCD"[rank_bunka];
-    document.getElementById("id_rank_nogyo").textContent = "SABCD"[rank_nogyo];
-    document.getElementById("id_rank_syogyo").textContent = "SABCD"[rank_syogyo];
-    document.getElementById("id_rank_asigaru").textContent = "SABCD"[rank_asigaru];
-    document.getElementById("id_rank_domei").textContent = "SABCD"[rank_domei];
-    document.getElementById("id_money_A").textContent = money_A + "貫";
-    document.getElementById("id_money_B").textContent = money_B + "貫";
-    document.getElementById("id_money_C").textContent = money_C + "貫";
-    document.getElementById("id_money_D").textContent = money_D + "貫";
-    document.getElementById("id_money").textContent = money + "貫";
-
+    update_table();
   } else {
     alert("カードを引くことができませんでした。");
   }
 }
 
+function update_table() {
+  document.getElementById("id_rank_kanni").textContent = "SABCD"[rank_kanni];
+  document.getElementById("id_rank_bunka").textContent = "SABCD"[rank_bunka];
+  document.getElementById("id_rank_nogyo").textContent = "SABCD"[rank_nogyo];
+  document.getElementById("id_rank_syogyo").textContent = "SABCD"[rank_syogyo];
+  document.getElementById("id_rank_asigaru").textContent = "SABCD"[rank_asigaru];
+  document.getElementById("id_rank_domei").textContent = "SABCD"[rank_domei];
+  document.getElementById("id_money_A").textContent = money_A + "貫";
+  document.getElementById("id_money_B").textContent = money_B + "貫";
+  document.getElementById("id_money_C").textContent = money_C + "貫";
+  document.getElementById("id_money_D").textContent = money_D + "貫";
+  document.getElementById("id_money").textContent = money + "貫";
+}
 // ボタンのクリックイベントを設定
 document.getElementById('drawButton').addEventListener('click', drawCard);
 
@@ -66,16 +68,4 @@ money_C = 1000;
 money_D = 0;
 money = 10000;
 
-
-
-document.getElementById("id_rank_kanni").textContent = "SABCD"[rank_kanni];
-document.getElementById("id_rank_bunka").textContent = "SABCD"[rank_bunka];
-document.getElementById("id_rank_nogyo").textContent = "SABCD"[rank_nogyo];
-document.getElementById("id_rank_syogyo").textContent = "SABCD"[rank_syogyo];
-document.getElementById("id_rank_asigaru").textContent = "SABCD"[rank_asigaru];
-document.getElementById("id_rank_domei").textContent = "SABCD"[rank_domei];
-document.getElementById("id_money_A").textContent = money_A + "貫";
-document.getElementById("id_money_B").textContent = money_B + "貫";
-document.getElementById("id_money_C").textContent = money_C + "貫";
-document.getElementById("id_money_D").textContent = money_D + "貫";
-document.getElementById("id_money").textContent = money + "貫";
+update_table();
