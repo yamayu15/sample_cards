@@ -21,6 +21,28 @@ async function drawCard() {
     const card = data.cards[0];
     document.getElementById('cardImage').src = card.image;
     document.getElementById('cardImage').alt = `${card.value} of ${card.suit}`;
+    if (rank_bunka <= 1) {
+      money = money + 3000;
+    }
+    if (rank_bunka == 2) {
+      money = money + 2000;
+    }
+    if (rank_bunka == 3) {
+      money = money + 1000;
+    }
+    
+    document.getElementById("id_rank_kanni").textContent = "SABCD"[rank_kanni];
+    document.getElementById("id_rank_bunka").textContent = "SABCD"[rank_bunka];
+    document.getElementById("id_rank_nogyo").textContent = "SABCD"[rank_nogyo];
+    document.getElementById("id_rank_syogyo").textContent = "SABCD"[rank_syogyo];
+    document.getElementById("id_rank_asigaru").textContent = "SABCD"[rank_asigaru];
+    document.getElementById("id_rank_domei").textContent = "SABCD"[rank_domei];
+    document.getElementById("id_money_A").textContent = money_A + "貫";
+    document.getElementById("id_money_B").textContent = money_B + "貫";
+    document.getElementById("id_money_C").textContent = money_C + "貫";
+    document.getElementById("id_money_D").textContent = money_D + "貫";
+    document.getElementById("id_money").textContent = money + "貫";
+
   } else {
     alert("カードを引くことができませんでした。");
   }
@@ -44,15 +66,6 @@ money_C = 1000;
 money_D = 0;
 money = 10000;
 
-if (rank_bunka <= 1) {
-  money = money + 3000;
-}
-if (rank_bunka == 2) {
-  money = money + 2000;
-}
-if (rank_bunka == 3) {
-  money = money + 1000;
-}
 
 
 document.getElementById("id_rank_kanni").textContent = "SABCD"[rank_kanni];
