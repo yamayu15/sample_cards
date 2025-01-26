@@ -21,16 +21,22 @@ async function drawCard() {
     const card = data.cards[0];
     document.getElementById('cardImage').src = card.image;
     document.getElementById('cardImage').alt = `${card.value} of ${card.suit}`;
-    if (rank_bunka <= 1) {
-      money = money + 3000;
+    console.log(card.suit);
+    console.log(card.value);
+    if (card.suit == "HEARTS") {
+      if (card.value == "ACE") {
+        if (rank_bunka <= 1) {
+          money = money + 3000;
+        }
+        if (rank_bunka == 2) {
+          money = money + 2000;
+        }
+        if (rank_bunka == 3) {
+          money = money + 1000;
+        }
+      }
     }
-    if (rank_bunka == 2) {
-      money = money + 2000;
-    }
-    if (rank_bunka == 3) {
-      money = money + 1000;
-    }
-    
+
     update_table();
   } else {
     alert("カードを引くことができませんでした。");
