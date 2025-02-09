@@ -222,6 +222,168 @@ async function drawCard() {
         money = money - 1000;
       }
     }
+    if (card.suit == "DIAMONDS") {
+      console.log("DIAMONDS");
+      if (card.value == "ACE") {
+        if (rank_syogyo <= 1) {
+          money = money + 5000;
+        }
+        if (rank_syogyo == 2) {
+          money = money + 5000;
+        }
+        if (rank_syogyo == 3) {
+          money = money + 5000;
+        }
+        rank_syogyo = 1;
+      }
+      if (card.value == "2") {
+        if (rank_syogyo <= 1) {
+          money = money + 2000;
+        }
+        if (rank_syogyo == 2) {
+          money = money + 1000;
+        }
+      }
+      if (card.value == "3") {
+        if (rank_syogyo <= 1) {
+          money = money - 1000;
+        }
+        if (rank_syogyo == 2) {
+          money = money - 1000;
+        }
+        if (rank_syogyo == 3) {
+          money = money - 3000;
+        }
+        if (rank_syogyo == 4) {
+          money = money - 3000;
+        }
+        rank_syogyo = rank_syogyo - 1;
+      }
+      if (card.value == "4") {
+        if (rank_syogyo == 3) {
+          money = money - 3000;
+        }
+        if (rank_syogyo == 4) {
+          money = money - 3000;
+        }
+        rank_syogyo = rank_syogyo + 1;
+      }
+      if (card.value == "5") {
+        money = money - 2000;
+        rank_syogyo = rank_syogyo + 1;
+        
+      }
+      if (card.value == "6") {
+        ##　よくわからん操作になっている　修正が必要
+      }
+      if (card.value == "7") {
+        money =money - 2000;
+        rank_syogyo = rank_syogyo - 1;
+      }
+      if (card.value == "8") {
+        money = money + 5000;
+        rank_syogyo = rank_syogyo - 1;
+      }
+      if (card.value == "9") {
+        money = money - 3000;
+        rank_syogyo = rank_syogyo + 2;
+      }
+      if (card.value == "10") {
+        if (rank_syogyo <= 1) {
+          money = money + 10000;
+        }
+        if (rank_syogyo == 2) {
+          money = money + 10000;
+        }
+        if (rank_syogyo == 3) {
+          money = money + 5000;
+        }
+        if (rank_syogyo == 4) {
+          money = money + 5000;
+        }
+      }
+    }
+
+    if (card.suit == "SPADES") {
+      console.log("SPADES");
+      if (card.value == "ACE") {
+        if (rank_syogyo <= 1) {
+          money = money + 3000;
+        }
+        if (rank_syogyo == 2) {
+          money = money + 2000;
+        }
+        if (rank_syogyo == 3) {
+          money = money + 1000;
+        }
+        rank_domei = rank_domei - 1;
+      }
+      if (card.value == "2") {
+        if (rank_syogyo >= 2) {
+          money = money - 3000;
+        }
+        rank_asigaru = rank_asigaru - 1;
+      }
+      if (card.value == "3") {
+
+        if (rank_syogyo >= 2) {
+          money = money - 2000;
+        }
+      }
+      if (card.value == "4") {
+        money = money -5000;
+        rank_domei = rank_domei + 1;
+      }
+      if (card.value == "5") {
+        if (rank_syogyo <= 1) {
+          money = money - 1000;
+        }
+        if (rank_syogyo == 2) {
+          money = money - 2000;
+        }
+        if (rank_syogyo == 3) {
+          money = money - 2000;
+        }
+        if (rank_syogyo == 4) {
+          money = money - 3000;
+        }
+      }
+      if (card.value == "6") {
+        if (rank_syogyo == 3) {
+          money = money - 2000;
+        }
+        if (rank_syogyo == 4) {
+          money = money - 2000;
+        }
+        rank_domei = rank_domei - 1;
+      }
+      if (card.value == "7") {
+        money =money - 2000;
+        rank_syogyo = rank_syogyo - 1;
+      }
+      if (card.value == "8") {
+        money = money + 5000;
+        rank_syogyo = rank_syogyo - 1;
+      }
+      if (card.value == "9") {
+        money = money - 3000;
+        rank_syogyo = rank_syogyo + 2;
+      }
+      if (card.value == "10") {
+        if (rank_syogyo <= 1) {
+          money = money + 10000;
+        }
+        if (rank_syogyo == 2) {
+          money = money + 10000;
+        }
+        if (rank_syogyo == 3) {
+          money = money + 5000;
+        }
+        if (rank_syogyo == 4) {
+          money = money + 5000;
+        }
+      }
+    }
     rank_kanni = Math.max(0, Math.min(rank_kanni, 4));
     rank_bunka = Math.max(0, Math.min(rank_bunka, 4));
     rank_nogyo = Math.max(0, Math.min(rank_nogyo, 4));
