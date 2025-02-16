@@ -402,10 +402,6 @@ function update_table() {
   document.getElementById("id_rank_syogyo").textContent = "SABCD"[rank_syogyo];
   document.getElementById("id_rank_asigaru").textContent = "SABCD"[rank_asigaru];
   document.getElementById("id_rank_domei").textContent = "SABCD"[rank_domei];
-  document.getElementById("id_money_A").textContent = money_A + "貫";
-  document.getElementById("id_money_B").textContent = money_B + "貫";
-  document.getElementById("id_money_C").textContent = money_C + "貫";
-  document.getElementById("id_money_D").textContent = money_D + "貫";
   document.getElementById("id_money").textContent = money + "貫";
 }
 function push_button_heart() {
@@ -458,10 +454,6 @@ rank_nogyo = 4;
 rank_syogyo = 4;
 rank_asigaru = 4;
 rank_domei = 4;
-money_A = 3000;
-money_B = 2000;
-money_C = 1000;
-money_D = 0;
 money = 10000;
 
 update_table();
