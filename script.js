@@ -408,8 +408,8 @@ function push_button_heart() {
   rank_kanni = rank_kanni - 1;
   rank_bunka = rank_bunka - 1;
   money = money - 1000;
-  update_table();
   money_zero_check();
+  update_table();
 }
 function money_zero_check() {
   if(money == 0) {
@@ -423,21 +423,21 @@ function money_zero_check() {
 function push_button_club() {
   rank_nogyo = rank_nogyo - 1;
   money = money - 1000;
-  update_table();
   money_zero_check();
+  update_table();
 }
 function push_button_dia() {
   rank_syogyo = rank_syogyo - 1;
   money = money - 1000;
-  update_table();
   money_zero_check();
+  update_table();
 }
 function push_button_spade() {
   rank_domei = rank_domei - 1;
   rank_asigaru = rank_asigaru - 1;
   money = money - 1000;
-  update_table();
   money_zero_check();
+  update_table();
 }
 // ボタンのクリックイベントを設定
 document.getElementById('drawButton').addEventListener('click', drawCard);
