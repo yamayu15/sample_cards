@@ -410,6 +410,9 @@ function push_button_heart() {
   money = money - 1000;
   money_zero_check();
   update_table();
+  if(rank_kanni <= 1){
+    document.getElementById("id_button_heart").style.display = "none";
+  }
 }
 function money_zero_check() {
   if(money == 0) {
@@ -426,12 +429,18 @@ function push_button_club() {
   money = money - 1000;
   money_zero_check();
   update_table();
+  if(rank_nogyo <= 1){
+    document.getElementById("id_button_club").style.display = "none";
+  }
 }
 function push_button_dia() {
   rank_syogyo = rank_syogyo - 1;
   money = money - 1000;
   money_zero_check();
   update_table();
+  if(rank_syogyo <= 1){
+    document.getElementById("id_button_dia").style.display = "none";
+  }
 }
 function push_button_spade() {
   rank_domei = rank_domei - 1;
@@ -439,6 +448,9 @@ function push_button_spade() {
   money = money - 1000;
   money_zero_check();
   update_table();
+  if(rank_domei <= 1){
+    document.getElementById("id_button_spade").style.display = "none";
+  }
 }
 // ボタンのクリックイベントを設定
 document.getElementById('drawButton').addEventListener('click', drawCard);
