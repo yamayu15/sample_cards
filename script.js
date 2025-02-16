@@ -418,6 +418,7 @@ function money_zero_check() {
     document.getElementById("id_button_dia").style.display = "none";
     document.getElementById("id_button_spade").style.display = "none";
     money = 10000;
+    document.getElementById("cardContainer").style.display = "block";
   }
 }
 function push_button_club() {
