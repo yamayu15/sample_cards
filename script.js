@@ -274,7 +274,6 @@ async function drawCard() {
         
       }
       if (card.value == "6") {
-        ##　よくわからん操作になっている　修正が必要
       }
       if (card.value == "7") {
         money =money - 2000;
@@ -409,18 +408,43 @@ function update_table() {
   document.getElementById("id_money_D").textContent = money_D + "貫";
   document.getElementById("id_money").textContent = money + "貫";
 }
+function push_button_heart() {
+  rank_kanni = rank_kanni - 1;
+  rank_bunka = rank_bunka - 1;
+  money = money - 1000;
+  update_table();
+}
+function push_button_club() {
+  rank_nogyo = rank_nogyo - 1;
+  money = money - 1000;
+  update_table();
+}
+function push_button_dia() {
+  rank_syogyo = rank_syogyo - 1;
+  money = money - 1000;
+  update_table();
+}
+function push_button_spade() {
+  rank_domei = rank_domei - 1;
+  rank_asigaru = rank_asigaru - 1;
+  money = money - 1000;
+  update_table();
+}
 // ボタンのクリックイベントを設定
 document.getElementById('drawButton').addEventListener('click', drawCard);
-
+document.getElementById('id_button_heart').addEventListener('click', push_button_heart);
+document.getElementById('id_button_club').addEventListener('click', push_button_club);
+document.getElementById('id_button_dia').addEventListener('click', push_button_dia);
+document.getElementById('id_button_spade').addEventListener('click', push_button_spade);
 // 初回ロード時にデッキをシャッフル
 shuffleDeck();
 
-rank_kanni = 1;
-rank_bunka = 1;
-rank_nogyo = 2;
-rank_syogyo = 3;
-rank_asigaru = 1;
-rank_domei = 0;
+rank_kanni = 4;
+rank_bunka = 4;
+rank_nogyo = 4;
+rank_syogyo = 4;
+rank_asigaru = 4;
+rank_domei = 4;
 money_A = 3000;
 money_B = 2000;
 money_C = 1000;
