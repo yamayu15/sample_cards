@@ -413,6 +413,13 @@ function push_button_heart() {
   rank_bunka = rank_bunka - 1;
   money = money - 1000;
   update_table();
+  if(money == 0) {
+    money = 10000;
+    document.getElementById("id_button_heart").style.display = "none";
+    document.getElementById("id_button_club").style.display = "none";
+    document.getElementById("id_button_dia").style.display = "none";
+    document.getElementById("id_button_spade").style.display = "none";
+  }
 }
 function push_button_club() {
   rank_nogyo = rank_nogyo - 1;
